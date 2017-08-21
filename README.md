@@ -15,4 +15,10 @@ Javascriptでバイオリズムを作るものです。
 
 
 ※長さは自由に調整できますが、高さは200で固定。  
-※元ソースはここから: https://ao-system.net/javascript/code/1020/
+※元ソースはここから: https://ao-system.net/javascript/code/1020/  
+
+
+[Green] Physical 身体  
+[Red] Sensitivity(Emotional)感情  
+[Blue] Intellectual 知性  
+
