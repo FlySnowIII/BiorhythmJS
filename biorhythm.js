@@ -2,7 +2,6 @@
  * biorhythm with a little edit
  * by Pengfei Tang 2017
  * 
- * 
  * From: https://ao-system.net/javascript/code/1020/
  * @auther ao-system
  */
