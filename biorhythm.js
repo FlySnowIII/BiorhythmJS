@@ -1,7 +1,7 @@
 /**
  * biorhythm with a little edit
  * by Pengfei Tang 2017
- * 
+ *
  * From: https://ao-system.net/javascript/code/1020/
  * @auther ao-system
  */
@@ -12,6 +12,7 @@ var Biorhythm = {
     syear: 2000,
     smonth: 1,
     sday: 1,
+    ssday:1,
 
     cv: undefined,
     ctx: undefined,
@@ -28,7 +29,8 @@ var Biorhythm = {
         this.bday = d1;
         this.syear = y2;
         this.smonth = m2;
-        this.sday = d2;
+        this.sday = 1;
+        this.ssday = d2+1;
     },
     calc: function(divId,width) {
         var elm = document.getElementById(divId);
@@ -42,11 +44,21 @@ var Biorhythm = {
     },
     drawRule: function() {
         this.ctx.strokeStyle = 'rgb(180,180,180)';
+        var tempCount = 1;
         for (var x = 0; x < this.cv.width; x += 12) {
+          if(tempCount === this.ssday){
+            this.ctx.strokeStyle = 'rgb(255,0,0)';
+            this.ctx.lineWidth = 4;
+          }
+          else{
+            this.ctx.strokeStyle = 'rgb(180,180,180)';
+            this.ctx.lineWidth =1;
+          }
             this.ctx.beginPath();	//縦 毎日
             this.ctx.moveTo(12.5 + x,21);
             this.ctx.lineTo(12.5 + x,180);
             this.ctx.stroke();
+            tempCount++;
         }
         this.ctx.strokeStyle = 'rgb(120,120,120)';
         this.ctx.beginPath();	//縦 当日
