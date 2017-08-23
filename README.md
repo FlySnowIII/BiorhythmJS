@@ -10,11 +10,11 @@ Javascriptでバイオリズムを作るものです。
     `//byear,bmonth,bday 誕生日`  
     `//syear,smonth,sday 当日`  
     `Biorhythm.setDate(byear,bmonth,bday,syear,smonth,sday);`  
-4.Biorhythm.calc(divID:String,長さ:number)  
-    `Biorhythm.calc("result",300);`  
+4.Biorhythm.calc(divID:String,長さ:number,高さ:number)  
+    `Biorhythm.calc("result",300,200);`  
 
 
-※長さは自由に調整できますが、高さは200で固定。  
+※長さ・高さが自由に調整できます。  
 ※元ソースはここから: https://ao-system.net/javascript/code/1020/  
 
 
