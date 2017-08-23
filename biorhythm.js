@@ -114,10 +114,6 @@ var Biorhythm = {
         var bioP = diff % 23;
         var bioS = diff % 28;
         var bioI = diff % 33;
-        console.log("diff : ",diff);
-        console.log("bioP : ",bioP);
-        console.log("bioS : ",bioS);
-        console.log("bioI : ",bioI);
 
         //P(身体) 緑
         this.ctx.beginPath();
@@ -126,7 +122,6 @@ var Biorhythm = {
         for (var x = 0; x < this.cv.width; x++) {
             var xx = x + (bioP * 12);	//1日は12ピクセル
             this.ctx.lineTo(x, Math.sin((xx / 23) * Math.PI / 180 * 30) * -this.height/2 + this.height/2);
-            console.log("bioP X : ", Math.sin((xx / 23) * Math.PI / 180 * 30) * -this.height/2 + this.height/2);
         }
         this.ctx.stroke();
         //S(感情) 赤
