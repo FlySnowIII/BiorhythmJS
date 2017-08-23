@@ -8,34 +8,25 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="biorhythm.js"></script>
     <script type="text/javascript">
-        function bioCalc()
-        {
-            // var byear   = parseInt(document.getElementById('byear').value);
-            // var bmonth  = parseInt(document.getElementById('bmonth').value);
-            // var bday    = parseInt(document.getElementById('bday').value);
-            // var syear   = parseInt(document.getElementById('syear').value);
-            // var smonth  = parseInt(document.getElementById('smonth').value);
-            // var sday    = parseInt(document.getElementById('sday').value);
+        function bioCalc(){
             var byear   = 1986;
             var bmonth  = 10;
             var bday    = 25;
             var syear   = 2017;
             var smonth  = 8;
-            var sday    = 23;
+            var sday    = 24;
 
-            //byear,bmonth,bday is birthday
             //syear,smonth,sday,is showday
             Biorhythm.setDate(byear,bmonth,bday,syear,smonth,sday);
-            //calc(idOfDiv,wodth) ,but height is just 200
-            Biorhythm.calc('result',$('#result').width());
+            Biorhythm.calc('result',$('#result').width(),200);
+            Biorhythm.calc('result2',$('#result2').width(),100);
         }
     </script>
 </head>
 <body>
-    <div id="result" style="width:100%;text-align: center">
-
-    </div>
+    <div id="result" style="width:100%"></div>
     <hr>
+    <div id="result2" style="width:100%"></div>
     <button onclick="bioCalc();">AAA</button>
 </body>
 </html>
