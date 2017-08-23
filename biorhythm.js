@@ -140,7 +140,6 @@ var Biorhythm = {
         for (var x = 0; x < this.cv.width; x++) {
             var xx = x + (bioI * 12);	//1日は12ピクセル
             this.ctx.lineTo(x, Math.sin((xx / 33) * Math.PI / 180 * 30) * -this.height/2 + this.height/2);
-            // this.ctx.lineTo(x, Math.sin((xx / 33) * Math.PI / this.height * 30) * -this.height/2 + this.height/2);
         }
         this.ctx.stroke();
     },
